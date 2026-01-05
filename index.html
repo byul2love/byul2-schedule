@@ -328,10 +328,8 @@ function addWebDragEvents(el,dateKey){
     d.splice(to,0,d.splice(from,1)[0]);
     const batch = writeBatch(db);
     d.forEach((item, i) => {
-  batch.set(doc(schedulesCol, item.id), {
-    ...item,
-    order: i
-  });
+  batch.set(doc(schedulesCol, item.id), { ...item, order: i });
+});
 });
     await batch.commit();
   });
