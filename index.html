@@ -18,7 +18,7 @@ header { background:#140bb6; color:white; padding:16px 15px; text-align:center; 
   padding:0;          /* ⭐ 바깥 여백 제거 */
 }
 
-#weekdays { }
+
 #calendar { margin-bottom:400px;background:#f7f7f7; }      
 .weekday { 
   text-align:center; 
@@ -50,7 +50,7 @@ header { background:#140bb6; color:white; padding:16px 15px; text-align:center; 
   border-top:1px solid #ccc;
 }
 .day.today {
-  background: #eef2ff;     /* 은은한 배경 */
+  background: #f3f3ff;    
 }     
 
 .day.selected {
@@ -77,7 +77,9 @@ header { background:#140bb6; color:white; padding:16px 15px; text-align:center; 
   /* 추가: 영어 단어도 글자 단위로 줄바꿈 */        
   overflow-wrap: break-word;   /* 긴 단어 줄바꿈 허용 */        
   word-break: break-all;       /* 모든 글자 단위 줄바꿈 */        
-  overflow: visible;        
+  overflow: visible; 
+    margin-left: 1px;  /* 일정 박스 좌우 살짝 간격 */
+    margin-right: 1px;       
 }        
         
 .schedule .link-icon {        
@@ -356,7 +358,7 @@ const typeColors = {
   발매: "#6190fe",     
   기념일: "#FFD59E",   
   SNS: "#fef08a",
-  기타: "#e0e7ff"     
+  기타: "#d2d8fe"     
 };       
         
 let currentDate=new Date(), selectedDateKey=null, activeGroupId=null, dragSrcEl=null, firestoreData={};        
